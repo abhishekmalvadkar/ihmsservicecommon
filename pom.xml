@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.amalvadkar</groupId>
 	<artifactId>ihmsservicecommon</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<name>ihmsservicecommon</name>
 	<description>Common Library For Internal Human Resource Management System</description>
 	<properties>
