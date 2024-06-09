@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 
-public interface FeedBackRepository extends JpaRepository<FeedBackEntity, String> {
+public interface FeedbackRepository extends JpaRepository<FeedBackEntity, String> {
 
     @Query("""
         SELECT fbe FROM FeedBackEntity fbe
