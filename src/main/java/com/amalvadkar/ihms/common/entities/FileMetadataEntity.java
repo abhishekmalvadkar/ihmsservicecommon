@@ -13,14 +13,14 @@ import lombok.Setter;
 @Table(name = "files_metadata")
 @Getter
 @Setter
-public class FileMetadataEntity extends AbstractStringIdBaseEntity  {
+public class FileMetadataEntity extends AbstractIdBaseEntity  {
 
     @Column(name = "category", nullable = false)
     @Enumerated(EnumType.STRING)
     private CategoryEnum categoryEnum;
 
     @Column(name = "record_id", nullable = false)
-    private String recordId;
+    private Long recordId;
 
     @Column(name = "file_name", nullable = false)
     private String fileName;

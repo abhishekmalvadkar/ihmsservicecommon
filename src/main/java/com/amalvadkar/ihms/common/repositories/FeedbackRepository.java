@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 
-public interface FeedbackRepository extends JpaRepository<FeedBackEntity, String> {
+public interface FeedbackRepository extends JpaRepository<FeedBackEntity, Long> {
 
     @Query("""
         SELECT fbe FROM FeedBackEntity fbe
@@ -17,7 +17,7 @@ public interface FeedbackRepository extends JpaRepository<FeedBackEntity, String
         where fbe.id= :feedbackId 
         AND fbe.deleteFlag=false
         """)
-    Optional<FeedBackEntity> findFeedbackByFeedbackId(@Param("feedbackId") String feedbackId);
+    Optional<FeedBackEntity> findFeedbackByFeedbackId(@Param("feedbackId") Long feedbackId);
 
 }
 

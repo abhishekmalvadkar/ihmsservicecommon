@@ -19,7 +19,7 @@ import java.time.Instant;
 @Table(name = "feedback")
 @Getter
 @Setter
-public class FeedBackEntity extends AbstractStringIdBaseEntity {
+public class FeedBackEntity extends AbstractIdBaseEntity {
 
     @Column(name = "title", nullable = false)
     private String title;
