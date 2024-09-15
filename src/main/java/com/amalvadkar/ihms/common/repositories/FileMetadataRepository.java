@@ -9,8 +9,8 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 import java.util.Optional;
 
-public interface FileMetadataRepository extends JpaRepository<FileMetadataEntity, String> {
-    Optional<FileMetadataEntity> findByIdAndDeleteFlagIsFalse(String fileId);
+public interface FileMetadataRepository extends JpaRepository<FileMetadataEntity, Long> {
+    Optional<FileMetadataEntity> findByIdAndDeleteFlagIsFalse(Long fileId);
 
     @Query("""
         SELECT
@@ -26,9 +26,9 @@ public interface FileMetadataRepository extends JpaRepository<FileMetadataEntity
         WHERE fe.recordId = :recordId
         AND fe.deleteFlag = false
         """)
-    List<FetchFilesContentDTO> findFilesMetadataByRecordId(@Param("recordId") String recordId);
+    List<FetchFilesContentDTO> findFilesMetadataByRecordId(@Param("recordId") Long recordId);
 
-    List<FileMetadataEntity> findAllByRecordId(String recordId);
+    List<FileMetadataEntity> findAllByRecordId(Long recordId);
 }
 
 

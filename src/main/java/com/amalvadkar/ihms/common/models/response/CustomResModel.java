@@ -33,4 +33,12 @@ public class CustomResModel {
                 .code(httpStatus.value())
                 .build();
     }
+
+    public static CustomResModel fail(List<String> errors , Integer code) {
+        return CustomResModel.builder()
+                .errors(errors)
+                .success(false)
+                .code(code)
+                .build();
+    }
 }

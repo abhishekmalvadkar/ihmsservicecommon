@@ -35,6 +35,7 @@ public abstract class AbstractBaseEntity extends AbstractDeleteFlagBaseEntity {
     @PrePersist
     public void prePersistForBaseEntity() {
         this.createdOn = Instant.now();
+        this.updatedOn = Instant.now();
     }
 
     @PreUpdate
